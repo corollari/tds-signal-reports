@@ -1,0 +1,10 @@
+  fd=0.25;
+  A=5;
+  N=10000;
+  n=(1:N)';
+  noise=randn(N, 1) + randn(N, 1)*i;
+  noise=noise./abs(noise);
+  x=A*cos(2*pi*fd.*n + 1) + noise;
+  theta1 = estimate(n(1:100), x(1:100), fd)
+  theta2 = estimate(n(1:1000), x(1:1000), fd)
+  theta3 = estimate(n(1:10000), x(1:10000), fd)
