@@ -8,5 +8,5 @@ function S_AR = compute_AR(signal, p)
   a=[1; ar];
   sigma=rx(1)+ar'*r
   sigma=real(sigma); % Remove e-12i numerical error
-  S_AR=sigma./(abs(fft(a, N)).^2);
+  S_AR=sigma./(abs(fft(a, 1e5)).^2);
 end
