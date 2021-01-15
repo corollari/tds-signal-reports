@@ -1,6 +1,0 @@
-function log_plot(S, Fs)
-  N=length(S)
-  x=linspace(-Fs/2, Fs/N:Fs/2
-  y=10*log10(fftshift(S))
-  plot(x, y)
-end
